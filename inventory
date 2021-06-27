@@ -1,4 +1,4 @@
-ansible1 ansible_ssh_host=10.0.1.193
-ansible2 ansible_ssh_host=10.0.1.239
-ansible3 ansible_ssh_host=10.0.1.190
-
+ansible1-Ubuntu ansible_ssh_host=10.0.1.193
+ansible2-Ubuntu ansible_ssh_host=10.0.1.239
+ansible3-Ubuntu ansible_ssh_host=10.0.1.190
+ansible4-CentOS ansible_ssh_host=centos@10.0.1.47
