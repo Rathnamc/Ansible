@@ -1,4 +1,9 @@
-ansible1-Ubuntu ansible_ssh_host=10.0.1.193 apache_package=apache2 php_package=libapache2-mod-php
-ansible2-Ubuntu ansible_ssh_host=10.0.1.239 apache_package=apache2 php_package=libapache2-mod-php
-ansible3-Ubuntu ansible_ssh_host=10.0.1.190 apache_package=apache2 php_package=libapache2-mod-php
-ansible4-CentOS ansible_ssh_host=centos@10.0.1.47 apache_package=httpd php_package=php
+[web_servers]
+ansible1-Ubuntu ansible_ssh_host=10.0.1.193 
+ansible4-CentOS ansible_ssh_host=centos@10.0.1.47 
+
+[file_servers]
+ansible3-Ubuntu ansible_ssh_host=10.0.1.190 
+
+[db_servers]
+ansible2-Ubuntu ansible_ssh_host=10.0.1.239 
