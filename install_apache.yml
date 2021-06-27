@@ -15,9 +15,25 @@
       state: latest
     when: ansible_distribution == "Ubuntu"
 
-
-  - name: Add PHP suport for apache
+  - name: Add PHP support for apache
     apt: 
       name: libapache2-mod-php
       state: latest
     when: ansible_distribution == "Ubuntu"
+
+  - name: Update repository index
+    yum:
+      update_cache: yes
+    when: ansible_distribution_version == "CentOS"
+
+  - name: Install the httpd package
+    yum:
+      name: httpd
+      state: latest
+    when: ansible_distribution == "CentOS"
+
+  - name: Add PHP support for apache
+    yum:
+      name: php
+      state: latest
+    when: ansible_distribution == "CentOS"
